@@ -1,3 +1,5 @@
+package com.kata.deposite;
+
 import static org.junit.Assert.assertEquals;
 
 import java.math.BigDecimal;
@@ -9,7 +11,6 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class Deposite {
-	//
 	private Account account;
 
 	@Given("^a client \"([^\"]*)\" with \"([^\"]*)\"  EUR in his account$")

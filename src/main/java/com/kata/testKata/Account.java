@@ -23,4 +23,8 @@ public class Account {
 	public BigDecimal getAccountAmount() {
 		return accountAmount;
 	}
+
+	public BigDecimal withdraw(BigDecimal bigDecimal) {
+		return null;
+	}
 }
