@@ -1,5 +1,10 @@
 package com.kata.testKata;
 
+/**
+ * Enumerator of operation type
+ * @author Christian
+ *
+ */
 public enum OperationType {
 	DEPOSIT("DEPOSIT"), WITHDRAW("WITHDRAW");
 

@@ -27,12 +27,12 @@ public class OperationHistory {
 
 	@When("^he gets history of all operations$")
 	public void he_gets_history_of_all_operations() throws Throwable {
-		this.listOperation = this.account.getOperationList();
+		this.listOperation = this.account.getTransactionOperation().getOperationList();
 	}
 
 	@Then("^transacations list should be empty$")
 	public void transacations_list_should_be_empty() throws Throwable {
-		assertEquals(0, this.account.getOperationList().size());
+		assertEquals(0, this.account.getTransactionOperation().getOperationList().size());
 	}
 
 	@Given("^a client \"([^\"]*)\" with \"([^\"]*)\"  EUR makes a deposit transaction of \"([^\"]*)\" EUR$")
@@ -46,7 +46,7 @@ public class OperationHistory {
 		operation.setAmountTransaction(new BigDecimal(arg3));
 		operation.setTransactionType(OperationType.DEPOSIT);
 		operation.setOperationDate(new Date());
-		this.account.addOperation(operation);
+		this.account.getTransactionOperation().addOperation(operation);
 	}
 
 	@Given("^a deposit opeation of \"([^\"]*)\" EUR$")
@@ -57,7 +57,7 @@ public class OperationHistory {
 		operation.setAmountTransaction(new BigDecimal(arg1));
 		operation.setTransactionType(OperationType.DEPOSIT);
 		operation.setOperationDate(new Date());
-		this.account.addOperation(operation);
+		this.account.getTransactionOperation().addOperation(operation);
 	}
 
 	@Given("^a withdrawal opeation of \"([^\"]*)\" EUR$")
@@ -68,7 +68,7 @@ public class OperationHistory {
 		operation.setAmountTransaction(new BigDecimal(arg1));
 		operation.setTransactionType(OperationType.WITHDRAW);
 		operation.setOperationDate(new Date());
-		this.account.addOperation(operation);
+		this.account.getTransactionOperation().addOperation(operation);
 	}
 
 	@Then("^opeations list should be (\\d+)$")

@@ -3,6 +3,12 @@ package com.kata.testKata;
 import java.math.BigDecimal;
 import java.util.Date;
 
+/**
+ * Contains all information of an operation
+ * 
+ * @author Christian
+ *
+ */
 public class Operation {
 	private OperationType transactionType;
 	private Date operationDate;

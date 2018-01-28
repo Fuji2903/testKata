@@ -15,7 +15,7 @@ public class Deposit {
 
 	@Given("^a client \"([^\"]*)\" with \"([^\"]*)\"  EUR in his account$")
 	public void a_client_with_EUR_in_his_account(String arg1, String arg2) throws Throwable {
-		this.account = new Account(arg2, new BigDecimal(arg2));
+		this.account = new Account(arg1, new BigDecimal(arg2));
 	}
 
 	@When("^he deposits \"([^\"]*)\" EUR to his account$")
