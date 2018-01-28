@@ -5,7 +5,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "Feature/")
+@CucumberOptions(features = "Feature/Deposite.feature")
 public class DepositeTest {
 
 }
