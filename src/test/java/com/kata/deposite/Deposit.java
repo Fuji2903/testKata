@@ -10,7 +10,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class Deposite {
+public class Deposit {
 	private Account account;
 
 	@Given("^a client \"([^\"]*)\" with \"([^\"]*)\"  EUR in his account$")
@@ -19,8 +19,8 @@ public class Deposite {
 	}
 
 	@When("^he deposites \"([^\"]*)\" EUR to his account$")
-	public void he_deposites_EUR_to_his_account(String arg1) throws Throwable {
-		this.account.deposite(new BigDecimal(arg1));
+	public void he_deposits_EUR_to_his_account(String arg1) throws Throwable {
+		this.account.deposit(new BigDecimal(arg1));
 	}
 
 	@Then("^his new balance is \"([^\"]*)\" EUR$")

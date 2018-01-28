@@ -6,7 +6,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "Feature/deposite.feature")
-public class DepositeTest {
+@CucumberOptions(features = "Feature/deposit.feature")
+public class DepositTest {
 
 }

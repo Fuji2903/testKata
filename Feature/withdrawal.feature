@@ -6,7 +6,7 @@ Scenario: A client withdraws money from his account
 	Given a client "ClientA" with "100"  EUR in his account
     When he withdraws "10" EUR to his account
     Then his new balance is "90" EUR and amount withdraw is "10"
-    
+
 Scenario: A client withdraws money from his account
 	Given a client "ClientA" with "-20"  EUR in his account
     When he withdraws "10" EUR to his account
