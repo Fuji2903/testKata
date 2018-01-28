@@ -18,7 +18,7 @@ public class Deposit {
 		this.account = new Account(arg2, new BigDecimal(arg2));
 	}
 
-	@When("^he deposites \"([^\"]*)\" EUR to his account$")
+	@When("^he deposits \"([^\"]*)\" EUR to his account$")
 	public void he_deposits_EUR_to_his_account(String arg1) throws Throwable {
 		this.account.deposit(new BigDecimal(arg1));
 	}
