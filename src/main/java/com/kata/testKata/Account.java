@@ -1,6 +1,8 @@
 package com.kata.testKata;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This class represents the bank account for a client
@@ -12,10 +14,12 @@ public class Account {
 
 	private String client;
 	private BigDecimal accountAmount;
+	private List<Operation> operationList;
 
 	public Account(String client, BigDecimal accountAmount) {
 		this.client = client;
 		this.accountAmount = accountAmount;
+		this.operationList = new ArrayList<>();
 	}
 
 	/**
@@ -25,7 +29,7 @@ public class Account {
 	 *            : amount to deposit
 	 */
 	public void deposit(BigDecimal depositeAmount) {
-		this.accountAmount = this.getAccountAmount().add(depositeAmount);
+		this.accountAmount = this.accountAmount.add(depositeAmount);
 	}
 
 	/**
@@ -47,11 +51,26 @@ public class Account {
 		return withdrawAmount;
 	}
 
+	/**
+	 * Adds new transaction to list
+	 * 
+	 * @param transaction
+	 *            new transaction
+	 */
+	public void addOperation(Operation transaction) {
+		if (transaction != null)
+			getOperationList().add(transaction);
+	}
+
 	public String getClient() {
 		return client;
 	}
 
 	public BigDecimal getAccountAmount() {
 		return accountAmount;
+	}
+
+	public List<Operation> getOperationList() {
+		return operationList;
 	}
 }
